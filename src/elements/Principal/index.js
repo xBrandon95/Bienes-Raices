@@ -235,3 +235,15 @@ export const SiteFooter = styled.footer`
     font-size: 1.8rem;
   }
 `;
+
+// NAVEGACION
+export const ContenedorNav = styled.div`
+  background-color: var(--gris);
+`;
+
+export const ContenidoNav = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+`;

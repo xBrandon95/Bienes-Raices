@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, ContenedorHeader, Barra } from '../../elements/Principal';
+import { Link } from 'react-router-dom';
 
 export const BannerPrincipal = () => {
   return (
@@ -7,15 +8,15 @@ export const BannerPrincipal = () => {
       <Header>
         <ContenedorHeader className="contenedor">
           <Barra>
-            <a href="/">
+            <Link to={'/'}>
               <img src="/img/logo.svg" alt="Logo Bienes Raices" />
-            </a>
+            </Link>
 
             <nav>
-              <a href="nosotros">Nosotros</a>
-              <a href="anuncios">Anuncios</a>
-              <a href="blog">Blog</a>
-              <a href="contacyo">Contacto</a>
+              <Link to={'/nosotros'}>Nosotros</Link>
+              <Link to={'/anuncios'}>Anuncios</Link>
+              <Link to={'/blog'}>Blog</Link>
+              <Link to={'/contacto'}>Contacto</Link>
             </nav>
           </Barra>
 

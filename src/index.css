@@ -95,6 +95,10 @@ img {
   text-align: center;
 }
 
+.fw-300 {
+  font-weight: 300;
+}
+
 .btn {
   color: var(--blanco);
   font-size: 1.8rem;
