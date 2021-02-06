@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Card,
   ContenidoCard,
@@ -8,6 +9,7 @@ import {
 
 export const CardItem = (props) => {
   const {
+    id,
     imagen,
     nombre,
     descripcion,
@@ -20,7 +22,7 @@ export const CardItem = (props) => {
   return (
     <>
       <Card>
-        <img className="imagenes" src={`/img/${imagen}`} alt="casa lago" />
+        <img className="imagenes" src={`/img/${imagen}`} alt={nombre} />
         <ContenidoCard>
           <h3>{nombre}</h3>
           <p>{descripcion}</p>
@@ -41,9 +43,9 @@ export const CardItem = (props) => {
               {estacionamiento}
             </Iconos>
           </ListaIconos>
-          <a href="casa" className="btn btn-naranja d-block">
+          <Link to={`/propiedad/${id}`} className="btn btn-naranja d-block">
             Ver Propiedad
-          </a>
+          </Link>
         </ContenidoCard>
       </Card>
     </>

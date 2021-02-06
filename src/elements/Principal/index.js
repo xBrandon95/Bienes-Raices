@@ -63,6 +63,7 @@ export const ContenedorServicios = styled.div`
 // MAIN
 export const Cards = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
@@ -72,6 +73,7 @@ export const Card = styled.div`
   border-radius: 1rem;
   flex-basis: calc(33.3% - 1rem);
   overflow: hidden;
+  margin-bottom: 2rem;
 
   img {
     object-fit: cover;

@@ -1,6 +1,7 @@
 import { Cards } from '../../elements/Principal';
 import { CardItem } from './CardItem';
-import { CasasPrincipal } from '../../data/casasPrincipal';
+import { CasasPrincipal } from '../../data/Propiedades';
+import { Link } from 'react-router-dom';
 
 export const Main = () => {
   return (
@@ -10,6 +11,8 @@ export const Main = () => {
         <Cards>
           {CasasPrincipal.map((casa) => (
             <CardItem
+              key={casa.id}
+              id={casa.id}
               imagen={casa.imagen}
               nombre={casa.nombre}
               descripcion={casa.descripcion}
@@ -21,9 +24,9 @@ export const Main = () => {
           ))}
         </Cards>
         <div className="right">
-          <a href="anuncio" className="btn btn-verde">
+          <Link to={'/propiedades'} className="btn btn-verde">
             Ver Todas
-          </a>
+          </Link>
         </div>
       </div>
     </main>

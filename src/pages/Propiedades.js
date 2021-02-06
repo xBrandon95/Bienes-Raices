@@ -1,11 +1,12 @@
 import { Navegacion } from '../components/Navegacion';
 import { Footer } from '../components/Footer';
+import { ListaPropiedades } from '../components/Propiedades/ListaPropiedades';
 
-export const Anuncios = () => {
+export const Propiedades = () => {
   return (
     <div>
       <Navegacion />
-      <h1>Anuncio</h1>
+      <ListaPropiedades />
       <Footer />
     </div>
   );

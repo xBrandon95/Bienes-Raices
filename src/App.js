@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Principal } from './pages/Principal';
 import { Nosotros } from './pages/Nosotros';
-import { Anuncios } from './pages/Anuncios';
+import { Propiedades } from './pages/Propiedades';
 import { Blog } from './pages/Blog';
 import { Contacto } from './pages/Contacto';
+import { Propiedad } from './pages/Propiedad';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Principal} />
         <Route path="/nosotros" component={Nosotros} />
-        <Route path="/anuncios" component={Anuncios} />
+        <Route path="/propiedades" component={Propiedades} />
+        <Route path="/propiedad/:id" component={Propiedad} />
         <Route path="/blog" component={Blog} />
         <Route path="/contacto" component={Contacto} />
       </Switch>

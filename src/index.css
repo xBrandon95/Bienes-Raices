@@ -99,11 +99,15 @@ img {
   font-weight: 300;
 }
 
+.mt-3 {
+  margin-top: 3rem;
+}
+
 .btn {
   color: var(--blanco);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  padding: 0.7rem 3rem;
+  padding: 0.5rem 3rem;
   display: inline-block;
   text-align: center;
   border-radius: 0.8rem;

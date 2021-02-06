@@ -14,7 +14,7 @@ export const BannerPrincipal = () => {
 
             <nav>
               <Link to={'/nosotros'}>Nosotros</Link>
-              <Link to={'/anuncios'}>Anuncios</Link>
+              <Link to={'/propiedades'}>Propiedades</Link>
               <Link to={'/blog'}>Blog</Link>
               <Link to={'/contacto'}>Contacto</Link>
             </nav>
