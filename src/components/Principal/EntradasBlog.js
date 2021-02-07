@@ -1,5 +1,7 @@
 import React from 'react';
-import { SeccionInferior, Blog, Testimonial } from '../../elements/Principal';
+import { BlogPrincipal } from '../../data/Blog';
+import { SeccionInferior, Testimonial } from '../../elements/Principal';
+import { ItemBlog } from '../Blog/ItemBlog';
 
 export const EntradasBlog = () => {
   return (
@@ -7,41 +9,17 @@ export const EntradasBlog = () => {
       <section className="entrada-blog">
         <h3 className="text-center">Nuestro blog</h3>
 
-        <Blog>
-          <div className="imagen-blog">
-            <img src="/img/blog1.jpg" alt="" />
-          </div>
-          <div className="contenido-blog">
-            <a href="sa">
-              <h4>Terraza en el techo de tu casa</h4>
-            </a>
-            <p>
-              Escrito el: <span>20/10/2019</span> por: <span>Admin</span>
-            </p>
-            <p>
-              Consejos para construir una terraza en el techo de tu casa, con
-              los mejores materiales y ahorrando dinero.
-            </p>
-          </div>
-        </Blog>
-
-        <Blog>
-          <div className="imagen-blog">
-            <img src="/img/blog2.jpg" alt="" />
-          </div>
-          <div className="contenido-blog">
-            <a href="sa">
-              <h4>Guía para la decoración de tu hogar</h4>
-            </a>
-            <p>
-              Escrito el: <span>20/10/2019</span> por: <span>Admin</span>
-            </p>
-            <p>
-              Maximiza el espacio en tu hogar con esta guia, aprende a combinar
-              muebles y colores para darle vida a tu espacio.
-            </p>
-          </div>
-        </Blog>
+        {BlogPrincipal.map((blog) => (
+          <ItemBlog
+            key={blog.id}
+            id={blog.id}
+            imagen={blog.imagen}
+            titulo={blog.titulo}
+            autor={blog.autor}
+            fecha={blog.fecha}
+            descripcion={blog.descripcion}
+          />
+        ))}
       </section>
 
       <section className="testimoniales">

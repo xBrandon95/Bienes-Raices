@@ -13,7 +13,7 @@ export const Navegacion = () => {
           <nav>
             <Link to={'/nosotros'}>Nosotros</Link>
             <Link to={'/propiedades'}>Propiedades</Link>
-            <Link to={'/blog'}>Blog</Link>
+            <Link to={'/blogs'}>Blog</Link>
             <Link to={'/contacto'}>Contacto</Link>
           </nav>
         </Barra>

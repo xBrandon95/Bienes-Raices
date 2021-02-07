@@ -23,7 +23,7 @@ export const ContenidoPropiedad = () => {
   } = propiedad;
 
   return (
-    <div className="contenedor seccion">
+    <div className="contenedor seccion mb-4">
       <h1 className="text-center">{nombre}</h1>
 
       <ContenedorPropiedad>
