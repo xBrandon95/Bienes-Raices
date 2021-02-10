@@ -1,11 +1,12 @@
 import { Navegacion } from '../components/Navegacion';
 import { Footer } from '../components/Footer';
+import { ContenidoContacto } from '../components/Contacto/ContenidoContacto';
 
 export const Contacto = () => {
   return (
     <div>
       <Navegacion />
-      <h1>Contacto</h1>
+      <ContenidoContacto />
       <Footer />
     </div>
   );

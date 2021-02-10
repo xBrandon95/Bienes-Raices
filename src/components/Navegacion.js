@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Barra, ContenedorNav, ContenidoNav } from '../elements/Principal';
 
 export const Navegacion = () => {
@@ -11,10 +11,18 @@ export const Navegacion = () => {
           </Link>
 
           <nav>
-            <Link to={'/nosotros'}>Nosotros</Link>
-            <Link to={'/propiedades'}>Propiedades</Link>
-            <Link to={'/blogs'}>Blog</Link>
-            <Link to={'/contacto'}>Contacto</Link>
+            <NavLink to={'/nosotros'} activeClassName="activo">
+              Nosotros
+            </NavLink>
+            <NavLink to={'/propiedades'} activeClassName="activo">
+              Propiedades
+            </NavLink>
+            <NavLink to={'/blogs'} activeClassName="activo">
+              Blog
+            </NavLink>
+            <NavLink to={'/contacto'} activeClassName="activo">
+              Contacto
+            </NavLink>
           </nav>
         </Barra>
       </ContenidoNav>

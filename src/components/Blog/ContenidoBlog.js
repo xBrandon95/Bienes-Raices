@@ -14,7 +14,7 @@ export const ContenidoBlog = () => {
   const { titulo, imagen, autor, fecha } = blog;
 
   return (
-    <div className="contenedor seccion mb-4">
+    <div className="contenedor seccion mb-4 min-height">
       <h1 className="text-center">{titulo}</h1>
       <DescripcionBlog>
         <div className="imagen-blog">

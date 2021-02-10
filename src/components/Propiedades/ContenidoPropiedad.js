@@ -23,7 +23,7 @@ export const ContenidoPropiedad = () => {
   } = propiedad;
 
   return (
-    <div className="contenedor seccion mb-4">
+    <div className="contenedor seccion mb-4 min-height">
       <h1 className="text-center">{nombre}</h1>
 
       <ContenedorPropiedad>
