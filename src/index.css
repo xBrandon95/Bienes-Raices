@@ -119,6 +119,15 @@ img {
   border-radius: 0.8rem;
   margin: 1.5rem 0;
   border: none;
+  display: block;
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
 }
 
 .btn {
@@ -138,7 +147,7 @@ img {
 }
 
 .min-height {
-  min-height: calc(100vh - 124px - 96px - 65px);
+  min-height: calc(100vh - 124px - 100px - 65px);
 }
 
 .activo {

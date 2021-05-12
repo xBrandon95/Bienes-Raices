@@ -26,8 +26,8 @@ export const FormularioContacto = () => {
       <fieldset>
         <legend>Información sobre Propiedad</legend>
         <label htmlFor="opciones">Vende o Compra: </label>
-        <select id="opciones">
-          <option value="" disabled selected>
+        <select id="opciones" defaultValue={'DEFAULT'}>
+          <option defaultValue="DEFAULT" disabled selected>
             -- Seleccione --
           </option>
           <option value="Compra">Compra</option>

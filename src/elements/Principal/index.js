@@ -2,12 +2,24 @@ import styled from '@emotion/styled';
 
 // HEADER
 export const Header = styled.header`
-  background-image: url(/img/header.jpg);
+  background-image: url(/img/header1.jpg);
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  height: 85vh;
+  height: 82vh;
   min-height: 60rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.48);
+    z-index: 1;
+  }
 `;
 
 export const ContenedorHeader = styled.div`
@@ -15,24 +27,50 @@ export const ContenedorHeader = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 
   h1 {
     color: var(--blanco);
     margin-bottom: 7rem;
-    width: 60%;
+    width: 100%;
+    font-size: 3.5rem;
+    z-index: 100;
+
+    @media (min-width: 768px) {
+      width: 60%;
+      font-size: 4rem;
+    }
   }
 `;
 
 export const Barra = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 3rem 0;
+  z-index: 100;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   nav a {
     color: var(--blanco);
-    font-size: 2rem;
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    display: block;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-right: 2rem;
+      font-size: 2rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 
   nav a:last-of-type {
@@ -46,12 +84,16 @@ export const Barra = styled.div`
 
 // SERVICIOS
 export const ContenedorServicios = styled.div`
-  display: flex;
-  justify-content: space-between;
   text-align: center;
 
-  div {
-    flex-basis: calc(33.3% - 1rem);
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    div {
+      flex-basis: calc(33.3% - 1rem);
+    }
   }
 
   h3 {
@@ -62,9 +104,11 @@ export const ContenedorServicios = styled.div`
 
 // MAIN
 export const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 `;
 
 export const Card = styled.div`
@@ -122,23 +166,43 @@ export const BannerInfo = styled.section`
 
 // BLOG Y TESTIMONIALES
 export const SeccionInferior = styled.section`
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    .entrada-blog {
+      flex-basis: 60%;
+    }
 
-  .entrada-blog {
-    flex-basis: 60%;
-  }
-
-  .testimoniales {
-    flex-basis: calc(40% - 1rem);
+    .testimoniales {
+      flex-basis: calc(40% - 1rem);
+    }
   }
 `;
 
 export const Blog = styled.article`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  flex-direction: column-reverse;
+  margin-bottom: 3rem;
+
+  img {
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .imagen-blog {
+      flex-basis: 40%;
+    }
+
+    .contenido-blog {
+      flex-basis: calc(60% - 3rem);
+    }
+  }
 
   a {
     color: black;
@@ -163,14 +227,6 @@ export const Blog = styled.article`
   span {
     color: var(--naranja);
     font-weight: bold;
-  }
-
-  .imagen-blog {
-    flex-basis: 40%;
-  }
-
-  .contenido-blog {
-    flex-basis: calc(60% - 3rem);
   }
 `;
 
@@ -212,20 +268,40 @@ export const SiteFooter = styled.footer`
   margin: 0;
   padding: 3rem 0;
   color: var(--blanco);
+  text-align: center;
 
   .contenido {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  nav {
+    margin-bottom: 2rem;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 
   nav a {
     color: var(--blanco);
     font-size: 1.8rem;
-    margin-right: 2rem;
-  }
+    display: block;
+    font-size: 2.2rem;
 
-  nav a:last-of-type {
-    margin-right: 0;
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-right: 2rem;
+      font-size: 2rem;
+      nav a:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 
   nav a:hover {
@@ -248,4 +324,5 @@ export const ContenidoNav = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  text-align: center;
 `;

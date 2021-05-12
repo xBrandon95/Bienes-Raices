@@ -13,14 +13,8 @@ export const ContenidoPropiedad = () => {
     return null;
   }
 
-  const {
-    imagen,
-    nombre,
-    precio,
-    wc,
-    dormitorios,
-    estacionamiento,
-  } = propiedad;
+  const { imagen, nombre, precio, wc, dormitorios, estacionamiento } =
+    propiedad;
 
   return (
     <div className="contenedor seccion mb-4 min-height">

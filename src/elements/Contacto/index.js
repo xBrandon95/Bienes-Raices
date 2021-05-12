@@ -11,8 +11,11 @@ export const ContenedorContacto = styled.div`
   }
 
   .formulario-contacto {
-    width: 65%;
     margin: 0 auto;
+
+    @media (min-width: 768px) {
+      width: 65%;
+    }
   }
 `;
 
